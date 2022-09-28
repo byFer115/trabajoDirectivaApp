@@ -12,4 +12,13 @@
 
 <br/>
 
-<p *ngIf="registrado">{{mensaje}} con el nombre {{nombre}} y apellido {{apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} y apellido {{apellido}}</p>
+<ng-template #sinRegistrar>
+
+  <p>No hay nadie registrado</p>
+
+</ng-template><br/>
+
+<ul>
+  <li *ngFor="let entrada of entradas; let i=index"><span style="font-size:larger; font-weight:bold">{{entrada.titulo}}</span>.Entrada {{i+1}}</li>
+</ul>

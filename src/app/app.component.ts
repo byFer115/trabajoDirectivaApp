@@ -11,9 +11,26 @@ export class AppComponent {
   nombre:String="";
   apellido:String="";
   registrado=false;
+  entradas:entrada[]=[];
+  constructor(){
+    this.entradas=[
+      {titulo:"hola"},
+      {titulo:"hola"},
+      {titulo:"hola"},
+      {titulo:"hola"},
+      {titulo:"hola"},
+    ]
+  }
 
   registrarUsuario(){
     this.registrado=true;
     this.mensaje="usuario registrado con exito";
   }
 }
+
+interface entrada{
+  titulo:String;
+}
+
+
+
