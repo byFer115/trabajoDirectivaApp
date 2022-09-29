@@ -6,13 +6,15 @@
 
   <input type="text" name="apellido" [(ngModel)]="apellido"><br/>
 
+  <input type="text" name="cargo" [(ngModel)]="cargo"><br/>
+
   <input type="button" value="Registrar" (click)="registrarUsuario()">
 
 </form>
 
 <br/>
 
-<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} y apellido {{apellido}}</p>
+<p *ngIf="registrado; else sinRegistrar">{{mensaje}} con el nombre {{nombre}} {{apellido}} y el cargo de <span [ngClass]="{paraDirectores:cargo=='director'}">{{cargo}}</span></p>
 <ng-template #sinRegistrar>
 
   <p>No hay nadie registrado</p>

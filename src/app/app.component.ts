@@ -10,6 +10,7 @@ export class AppComponent {
   mensaje= "";
   nombre:String="";
   apellido:String="";
+  cargo:string="";
   registrado=false;
   entradas:entrada[]=[];
   constructor(){
